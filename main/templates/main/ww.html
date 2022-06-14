@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html> 
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/ww.css' %}"/>
+
+<title>{{ title }}</title>
+</head>
+<body>
+<div>
+<img src="{% static 'img/fon.png' %}" class="fon" >
+<img src="{% static 'img/mf.jpg' %}" class="mf" >
+<img src="{% static 'img/kv.png' %}" class="kv" >
+<img src="{% static 'img/vk.png' %}" class="vk" >
+<img src="{% static 'img/yt.png' %}" class="yt" >
+<img src="{% static 'img/inst.png' %}" class="inst" >
+
+<h1 class = "tlk">Личный кабинет </h1>
+<h1 class = "tkv">© кванториум бор 2021-2021| Cookies| Защита данных | Правовая информация </h1>
+<h1 class = "tmk">Мои курсы </h1>
+<h1 class = "tmd">Мои данные  </h1>
+<a href="wwww.html" ><p class="tld"> Мои Достижения</p></a>
+
+{%  for el in data %}
+
+<ul class="tf">
+
+<li>Ник: {{ el.username }}</li>
+<li> Фамилия: {{ el.last_name }} </li>
+<li>Имя: {{ el.first_name }}</li>
+<li>Отчество: </li>
+<li>Снилс: </li>
+<li>Данные карты: </li>
+<li>Дата рождения: </li>
+<li>Данные паспорта: </li>
+
+</ul>
+{% endfor %}
+
+</div>
+
+</html>
+</body>
